@@ -1,29 +1,31 @@
 package com.cs137.javaservletwebapp.controller;
 
-import com.cs137.javaservletwebapp.model.Employee;
-import com.cs137.javaservletwebapp.model.Product;
 import com.cs137.javaservletwebapp.service.EmployeeService;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import com.cs137.javaservletwebapp.service.ProductService;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 
-@WebServlet(name = "AboutServlet", value = "/")
+@WebServlet(name = "AboutServlet", value = "")
 public class AboutServlet extends HttpServlet {
     private EmployeeService employeeService;
+    private ProductService productService;
 
     @Override
     public void init() throws ServletException {
         super.init();
         this.employeeService = new EmployeeService();
+        this.productService = new ProductService();
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("employees", this.employeeService.getEmployees());
+        request.setAttribute("products", this.productService.getProducts());
         request.getRequestDispatcher("about.jsp").forward(request, response);
     }
 
