@@ -5,10 +5,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.text.NumberFormat;
+import java.util.UUID;
 
 @Getter
 @Setter
 public class Product {
+    private UUID id = UUID.randomUUID();
     private String imageUrl;
     private String name;
     private String maker;
