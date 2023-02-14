@@ -9,9 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="fix redirect issue">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/model/Product.java" afterDir="false" />
+    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="currency view fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/AboutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/AboutServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +163,7 @@
       <workItem from="1676227333565" duration="3330000" />
       <workItem from="1676347957361" duration="4170000" />
       <workItem from="1676352448024" duration="1627000" />
-      <workItem from="1676391672142" duration="17482000" />
+      <workItem from="1676391672142" duration="21049000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1676230489925</created>
@@ -197,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676410353019</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="currency view fix">
+      <created>1676411642578</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676411642578</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +230,7 @@
     <MESSAGE value="almost done with about page" />
     <MESSAGE value="header fixed" />
     <MESSAGE value="fix redirect issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix redirect issue" />
+    <MESSAGE value="currency view fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="currency view fix" />
   </component>
 </project>

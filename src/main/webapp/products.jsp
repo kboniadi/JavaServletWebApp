@@ -47,26 +47,35 @@
 </header>
 <div class="main container">
     <h1>Our Products</h1>
-    <div class="main container px-4 text-center">
-        <div class="row row-cols-3 gx-3 gy-5">
-            <%
-                List<Product> products = (List<Product>) request.getAttribute("products");
-                for (Product product : products) {
-            %>
-            <div class="col">
-                <div class="card">
-                    <img src="<%=product.getImageUrl()%>" class="card-img-top" alt="phone" width="200px" height="200px"
-                         style="object-fit: contain;">
-                    <div class="card-body">
-                        <h4><%=product.getName()%></h4>
-                        <div><%=product.getMaker()%></div>
-                        <div><strong><%=product.getPrice()%></strong></div>
-                    </div>
+    <div id="cards-hover">
+        <div class="text-center">
+            <div class="row row-cols-3 gx-3 gy-5">
+                <%
+                    List<Product> products = (List<Product>) request.getAttribute("products");
+                    for (Product product : products) {
+                %>
+                <div class="col">
+                    <a href="">
+                        <div class="card">
+                            <div class="image-box">
+                                <img src="<%=product.getImageUrl()%>" class="" alt="phone" width="200px" height="200px"
+                                     style="object-fit: contain;">
+                            </div>
+                            <div class="card-body">
+                                <h6><%=product.getName()%></h6>
+                                <div class="body">
+                                    <div><%=product.getMaker()%></div>
+                                    <div><strong><%=product.getPrice()%></strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+                <%}%>
             </div>
-            <%}%>
         </div>
     </div>
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
