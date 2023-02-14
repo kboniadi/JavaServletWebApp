@@ -1,6 +1,6 @@
 package com.cs137.javaservletwebapp.controller;
 
-import com.cs137.javaservletwebapp.service.ProductServ;
+import com.cs137.javaservletwebapp.service.ProductService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,12 +11,12 @@ import java.io.IOException;
 
 @WebServlet(name="ProductsServlet", value="/")
 public class ProductsServlet extends HttpServlet {
-    private ProductServ products;
+    private ProductService products;
 
     @Override
     public void init() throws ServletException {
         super.init();
-        this.products = new ProductServ();
+        this.products = new ProductService();
     }
 
     @Override
