@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name="ProductsServlet", value="/")
+@WebServlet(name="ProductsServlet", value="/products")
 public class ProductsServlet extends HttpServlet {
     private ProductService products;
 
@@ -21,8 +21,8 @@ public class ProductsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("employees", this.products.getProducts());
-        request.getRequestDispatcher("Products.jsp").forward(request, response);
+        request.setAttribute("products", this.products.getProducts());
+        request.getRequestDispatcher("products.jsp").forward(request, response);
     }
 
     @Override

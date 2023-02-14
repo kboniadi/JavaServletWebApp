@@ -1,11 +1,9 @@
-<%@ page import="com.cs137.javaservletwebapp.model.Employee" %>
-<%@ page import="java.util.List" %>
 <%@ page import="com.cs137.javaservletwebapp.model.Product" %>
-
+<%@page import="java.util.List"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>About us</title>
+    <title>Products</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f7ec9befb7.js" crossorigin="anonymous"></script>
@@ -48,31 +46,8 @@
     </div>
 </header>
 <div class="main container">
-    <h2>About Us</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, eaque hic illum maxime nostrum odit suscipit tempore
-        ullam! Accusamus dignissimos doloremque enim ipsa reiciendis repudiandae. Adipisci aperiam illo provident
-        soluta.
-    </p>
-    <h3>Meet our team</h3>
-    <%
-        List<Employee> employees = (List<Employee>) request.getAttribute("employees");
-        for (Employee employee : employees) {
-    %>
-    <div>
-        <img src="<%=employee.getProfilePicUrl()%>" alt="profile pic" width="100px" style="float: left; margin-right: 15px; object-fit: cover">
-        <div>
-            <h2 style=""><%=employee.getName()%>
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dignissimos enim, hic illo incidunt
-                inventore iste maxime nam tenetur voluptatem? A accusamus autem dolor fuga ipsum nulla obcaecati veritatis.
-                Dolorum?</p>
-        </div>
-    </div>
-    <br>
-    <%}%>
-
-    <h3>These are our products</h3>
-    <div class="container px-4 text-center">
+    <h1>Our Products</h1>
+    <div class="main container px-4 text-center">
         <div class="row row-cols-3 gx-3 gy-5">
             <%
                 List<Product> products = (List<Product>) request.getAttribute("products");
@@ -94,4 +69,5 @@
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
 </html>
