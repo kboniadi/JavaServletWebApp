@@ -1,6 +1,26 @@
+:root {
+    --nav-bar-height: 65px;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+.main {
+    padding-top: calc(var(--nav-bar-height) + 1rem);
+}
+
+.sticky {
+    left: 0;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-bar-height);
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
+    z-index: 1030;
+    background: #fff;
+    padding: 0;
+}
