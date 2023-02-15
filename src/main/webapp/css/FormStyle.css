@@ -1,0 +1,48 @@
+
+input{
+    margin-top: 5px;
+    margin-left: 12px;
+    padding: 10px;
+
+
+    outline-color: aquamarine;
+    outline-width: 10px;
+}
+
+input[type=number]{
+    width: 50px;
+    padding: 0px;
+    font-size: 20px;
+    text-align: center;
+}
+
+fieldset{
+    margin: 12px;
+    width: 430px;
+    align-items: center;
+}
+
+input[type=radio]{
+
+}
+
+label{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+button{
+    background-color: lightgray;
+    font-size: 20px;
+    padding: 12px;
+    margin: 12px;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color: darkgray;
+    color: white;
+}
+
