@@ -55,11 +55,10 @@
                     for (Product product : products) {
                 %>
                 <div class="col">
-                    <a href="">
+                    <a href="order?productId=<%=product.getId()%>">
                         <div class="card">
                             <div class="image-box">
-                                <img src="<%=product.getImageUrl()%>" class="" alt="phone" width="200px" height="200px"
-                                     style="object-fit: contain;">
+                                <img src="<%=product.getImageUrl()%>" alt="phone">
                             </div>
                             <div class="card-body">
                                 <h6><%=product.getName()%></h6>

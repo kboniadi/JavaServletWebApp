@@ -9,7 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="added Uuid to Product" />
+    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="cropped images">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/OrderServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/iphone13-midnight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/products/samsung-galaxy-s22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OrderForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/FormStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/orderStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/products/Apple-iPhone-14-Pro-Deep-Purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/img/products/Apple-iPhone-14-Pro-Deep-Purple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,8 +42,8 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -51,21 +62,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.applicationServers",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/img/products" />
@@ -73,7 +84,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="GlassFish 7.0.1" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.1" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="GlassFish 7.0.1" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.1" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true" show_console_on_std_err="true" show_console_on_std_out="true">
       <option name="BROWSER_ID" value="e5120d43-2c3f-47ef-9f26-65e539e05186" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -158,7 +169,8 @@
       <workItem from="1676227333565" duration="3330000" />
       <workItem from="1676347957361" duration="4170000" />
       <workItem from="1676352448024" duration="1627000" />
-      <workItem from="1676391672142" duration="23053000" />
+      <workItem from="1676391672142" duration="23389000" />
+      <workItem from="1676422477966" duration="4946000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1676230489925</created>
@@ -216,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676415454720</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="cropped images">
+      <created>1676417396851</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676417396851</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +261,7 @@
     <MESSAGE value="currency view fix" />
     <MESSAGE value="products are now clickable" />
     <MESSAGE value="added Uuid to Product" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Uuid to Product" />
+    <MESSAGE value="cropped images" />
+    <option name="LAST_COMMIT_MESSAGE" value="cropped images" />
   </component>
 </project>
