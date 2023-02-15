@@ -28,7 +28,7 @@ function addDiscount() {
         currency: 'USD',
     });
     let $value = $("#total")
-    let result = parseFloat($value.text().trim().replace(/[$,]+/g,"")) + 5;
+    let result = parseFloat($value.text().trim().replace(/[$,]+/g,"")) - 5;
     $value.text(USDollar.format(result))
     $("#discount-value").text("5.00");
     $("#pay-total").text(USDollar.format(result))
@@ -40,7 +40,7 @@ function removeDiscount() {
         currency: 'USD',
     });
     let $value = $("#total")
-    let result = parseFloat($value.text().trim().replace(/[$,]+/g,"")) - 5;
+    let result = parseFloat($value.text().trim().replace(/[$,]+/g,"")) + 5;
     $value.text(USDollar.format(result))
     $("#discount-value").text("0.00");
     $("#pay-total").text(USDollar.format(result))

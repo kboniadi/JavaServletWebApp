@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="OrderServlet created and linked to selected product">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/script.js" afterDir="false" />
+    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="updated order page to be responsive with bootstrap">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/OrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/OrderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/orderStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/orderStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +162,8 @@
       <workItem from="1676347957361" duration="4170000" />
       <workItem from="1676352448024" duration="1627000" />
       <workItem from="1676391672142" duration="23389000" />
-      <workItem from="1676422477966" duration="14546000" />
+      <workItem from="1676422477966" duration="14645000" />
+      <workItem from="1676498145929" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1676230489925</created>
@@ -238,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676427778429</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated order page to be responsive with bootstrap">
+      <created>1676438600681</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676438600681</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +270,7 @@
     <MESSAGE value="added Uuid to Product" />
     <MESSAGE value="cropped images" />
     <MESSAGE value="OrderServlet created and linked to selected product" />
-    <option name="LAST_COMMIT_MESSAGE" value="OrderServlet created and linked to selected product" />
+    <MESSAGE value="updated order page to be responsive with bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated order page to be responsive with bootstrap" />
   </component>
 </project>
