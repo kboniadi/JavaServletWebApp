@@ -22,7 +22,7 @@ public class OrderServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         var res = this.productService.find(request.getParameter("productId"));
         if (res.isPresent()) {
-            request.getSession().setAttribute("product", res.get());
+            request.setAttribute("product", res.get());
             request.getRequestDispatcher("order.jsp").forward(request, response);
         } else {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
