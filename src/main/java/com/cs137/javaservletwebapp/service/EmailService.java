@@ -1,5 +1,6 @@
 package com.cs137.javaservletwebapp.service;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
@@ -15,9 +16,14 @@ public class EmailService {
     }
 
     public boolean sendEmail(String email, String code) {
-        String fromEmail = "noreplykrd@gmail.com";
-        String password = "ffwqcvqjmeuadggq";
+        Dotenv env = Dotenv.configure().directory(System.getProperty("user.home")).load();
 
+        var fromEmail = env.get("EMAIL", null);
+        var password = env.get("PASSWORD", null);
+
+        if (fromEmail == null || password == null) {
+            return false;
+        }
         try {
             // your host email smtp server details
             Properties pr = new Properties();

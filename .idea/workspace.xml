@@ -9,8 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="smtp server setup with poor UI">
+    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="remove yahoo email">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/service/EmailService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/kord/Documents/source.nosync/inf122/JavaServletWebApp/src/main/resources",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -71,7 +76,12 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/target/JavaServletWebApp-1.0-SNAPSHOT/WEB-INF" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp/img/products" />
       <recent name="$PROJECT_DIR$/src/main/webapp/img" />
     </key>
@@ -168,6 +178,8 @@
       <workItem from="1676502756574" duration="392000" />
       <workItem from="1676509364673" duration="11657000" />
       <workItem from="1676521327315" duration="37000" />
+      <workItem from="1676521422974" duration="364000" />
+      <workItem from="1676524243953" duration="4231000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1676230489925</created>
@@ -260,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676521101163</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="remove yahoo email">
+      <created>1676521449542</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676521449542</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +310,7 @@
     <MESSAGE value="updated order page to be responsive with bootstrap" />
     <MESSAGE value="fix discount total price" />
     <MESSAGE value="smtp server setup with poor UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="smtp server setup with poor UI" />
+    <MESSAGE value="remove yahoo email" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove yahoo email" />
   </component>
 </project>
