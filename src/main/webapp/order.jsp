@@ -78,36 +78,50 @@
                 <div class="h5 fw-bold">Payment Details</div>
                 <p class="dis mb-3">Complete your purchase by providing your payment details</p>
             </div>
-            <form action="order" method="post">
+            <form action="order" method="post" class = "needs-validation" novalidate>
                 <div class="mb-3">
                     <p class="dis fw-bold mb-2">Email address</p>
-                    <input class="form-control" type="email" value="Timmy@gmail.com" name="email">
+                    <input class="form-control" type="email" value="Timmy@gmail.com" name="email" required>
+                    <div class="invalid-feedback">
+                        Please input email.
+                    </div>
                 </div>
                 <div>
                     <p class="dis fw-bold mb-2">Card details</p>
                     <div class="d-flex align-items-center justify-content-between card-atm border rounded">
                         <div class="fab fa-cc-visa ps-3"></div>
-                        <input type="text" class="form-control" placeholder="Card Details">
+                        <input type="text" class="form-control" placeholder="Card Details" required>
                         <div class="d-flex w-50">
-                            <input type="text" class="form-control px-0" placeholder="MM/YY">
-                            <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV">
+                            <input type="text" class="form-control px-0" placeholder="MM/YY" required>
+                            <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV" required>
                         </div>
                     </div>
+                    <div class="invalid-feedback">
+                        Please input correct card information.
+                    </div>
+
                     <div class="my-3 cardname">
                         <p class="dis fw-bold mb-2">Cardholder name</p>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" required>
+                        <div class="invalid-feedback">
+                            Please input cardholder name.
+                        </div>
                     </div>
                     <div class="address">
                         <p class="dis fw-bold mb-3">Billing address</p>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected hidden>United States</option>
+                        <select class="form-select" aria-label="Default select example" required>
+                            <option selected disabled value>Choose</option>
                             <option value="1">London</option>
                             <option value="2">Australia</option>
                             <option value="3">Canada</option>
+                            <option value="4">United States</option>
                         </select>
                         <div class="d-flex">
-                            <input class="form-control zip" type="text" placeholder="ZIP">
-                            <input class="form-control state" type="text" placeholder="State">
+                            <input class="form-control zip" type="text" placeholder="ZIP" required>
+                            <input class="form-control state" type="text" placeholder="State" required>
+                        </div>
+                        <div class="invalid-feedback">
+                            Please input correct billing address.
                         </div>
                         <div class="my-3">
                             <p class="dis fw-bold mb-2">Discount Code</p>
