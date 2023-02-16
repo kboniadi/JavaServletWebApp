@@ -15,8 +15,6 @@ public class EmailService {
     }
 
     public boolean sendEmail(String email, String code) {
-//        String fromEmail = "kboniadi@yahoo.com";
-//        String password = "kpsmuktpvrasoxoq";
         String fromEmail = "noreplykrd@gmail.com";
         String password = "ffwqcvqjmeuadggq";
 
