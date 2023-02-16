@@ -1,10 +1,10 @@
 package com.cs137.javaservletwebapp.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.text.NumberFormat;
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -17,14 +17,16 @@ public class Product {
     private Double rawValue;
     private String price;
     private Double reviews;
+    private List<String> imageUrlGallery;
 
-    public Product(String imageUrl, String name, String maker, Double rawValue, Double reviews) {
+    public Product(String imageUrl, String name, String maker, Double rawValue, Double reviews, List<String> imageUrlGallery) {
         this.imageUrl = imageUrl;
         this.name = name;
         this.maker = maker;
         this.rawValue = rawValue;
         this.reviews = reviews;
         this.price = NumberFormat.getCurrencyInstance().format(this.rawValue);
+        this.imageUrlGallery = imageUrlGallery;
     }
 
     public void setRawValue(Double rawValue) {

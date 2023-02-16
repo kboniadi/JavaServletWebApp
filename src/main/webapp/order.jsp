@@ -26,7 +26,7 @@
                 </p>
             </div>
             <div id="my" class="carousel slide carousel-fade img-details" data-bs-ride="carousel"
-                 data-bs-interval="2000">
+                 data-bs-interval="5000">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#my" data-bs-slide-to="0" class="active" aria-current="true"
                             aria-label="Slide 1"></button>
@@ -34,18 +34,11 @@
                     <button type="button" data-bs-target="#my" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img
-                                src="${product.imageUrl}"
-                                class="d-block w-100" style="object-fit: contain;"></div>
-                    <div class="carousel-item">
-                        <img
-                                src="${product.imageUrl}"
-                                class="d-block w-100" style="object-fit: contain;"></div>
-                    <div class="carousel-item">
-                        <img
-                                src="${product.imageUrl}"
-                                class="d-block w-100" style="object-fit: contain;"></div>
+                    <% for (int i = 0; i < product.getImageUrlGallery().size(); i++) {%>
+                        <div class="carousel-item <%=i == 0 ? "active" : ""%>">
+                            <img src="<%=product.getImageUrlGallery().get(i)%>" class="d-block w-100" style="object-fit: contain;" alt="">
+                        </div>
+                    <%}%>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#my" data-bs-slide="prev">
                     <div class="icon">
