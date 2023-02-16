@@ -19,7 +19,7 @@ public class ProductService{
             new Product("img/products/Doro-750-Consumer-Cellular-Phone.png", "Doro 750", "Doro", 35.00, 3.2),
             new Product("img/products/Apple-iPhone-11.png", "iPhone 11", "Apple Inc.", 900.00, 3.5),
             new Product("img/products/Iphone 12.png", "iPhone 12", "Apple Inc.", 950.00, 4.0),
-            new Product("img/products/iphone13-midnight.png", "iPhone 13", "Apple Inc.", 950.00, 4.0));
+            new Product("img/products/iphone13max.png", "iPhone 13 Pro Max", "Apple Inc.", 950.00, 4.0));
 
 
     public ProductService() {
