@@ -19,9 +19,9 @@
                 <div class="col-xl-12">
                     <div class="main-menu">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="#top">
+                            <a class="navbar-brand" href="${pageContext.request.contextPath}/">
                                 <h3 style="margin: 0;">
-                                    <i class="fa-regular fa-laptop"></i>
+                                    <i class="fa-solid fa-laptop"></i>
                                 </h3>
                             </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
