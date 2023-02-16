@@ -81,7 +81,7 @@
             <form action="order" method="post" class = "needs-validation" novalidate>
                 <div class="mb-3">
                     <p class="dis fw-bold mb-2">Email address</p>
-                    <input class="form-control" type="email" value="Timmy@gmail.com" name="email" required>
+                    <input class="form-control" type="email" placeholder="Timmy@gmail.com" name="email" required>
                     <div class="invalid-feedback">
                         Please input email.
                     </div>
