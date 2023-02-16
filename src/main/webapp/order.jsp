@@ -78,10 +78,10 @@
                 <div class="h5 fw-bold">Payment Details</div>
                 <p class="dis mb-3">Complete your purchase by providing your payment details</p>
             </div>
-            <form action="">
+            <form action="order" method="post">
                 <div class="mb-3">
                     <p class="dis fw-bold mb-2">Email address</p>
-                    <input class="form-control" type="email" value="Timmy@gmail.com">
+                    <input class="form-control" type="email" value="Timmy@gmail.com" name="email">
                 </div>
                 <div>
                     <p class="dis fw-bold mb-2">Card details</p>
@@ -138,9 +138,10 @@
                                     ${product.price}
                                 </p>
                             </div>
-                            <div class="btn btn-primary mt-2">Pay<span
-                                    class="fas fa-dollar-sign px-1"></span><span id="pay-total">${product.price}</span>
-                            </div>
+<%--                            <span class="fas fa-dollar-sign px-1"></span>--%>
+                            <button class="btn btn-primary mt-2" type="submit">
+                                Pay <span id="pay-total">${product.price}</span>
+                            </button>
                         </div>
                     </div>
                 </div>

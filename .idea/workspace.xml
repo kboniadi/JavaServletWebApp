@@ -9,8 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="updated order page to be responsive with bootstrap">
+    <list default="true" id="d216fca7-b2bf-4ebc-a711-14e11f833951" name="Changes" comment="fix discount total price">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/VerifyServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/verify.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/OrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/OrderServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/ProductsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs137/javaservletwebapp/controller/ProductsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +28,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jspx File" />
-        <option value="Class" />
         <option value="CSS File" />
-        <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -164,6 +171,8 @@
       <workItem from="1676391672142" duration="23389000" />
       <workItem from="1676422477966" duration="14645000" />
       <workItem from="1676498145929" duration="46000" />
+      <workItem from="1676502756574" duration="392000" />
+      <workItem from="1676509364673" duration="11220000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1676230489925</created>
@@ -242,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676438600681</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix discount total price">
+      <created>1676503143447</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676503143447</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +287,7 @@
     <MESSAGE value="cropped images" />
     <MESSAGE value="OrderServlet created and linked to selected product" />
     <MESSAGE value="updated order page to be responsive with bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated order page to be responsive with bootstrap" />
+    <MESSAGE value="fix discount total price" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix discount total price" />
   </component>
 </project>
