@@ -53,11 +53,9 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <p class="dis my-3 info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quos ipsa sed
-                officiis odio libero consectetur placeat dignissimos et ab dolorum, nemo id provident quidem modi,
-                dolorem dolores quas quasi. </p>
+            <p class="dis my-3 info">${product.description}</p>
             <p class="dis mb-3 updates">${product.maker}</p>
-            <p class="dis mb-3 updates">${product.reviews}</p>
+            <p class="dis mb-3 updates">${product.reviews}/5.0</p>
             <p class="dis mb-3 different">Three different colored sets:</p>
             <div class="dis">
                 <p class="black"><span class="fas fa-arrow-right mb-3 pe-2"></span>Black</p>

@@ -19,7 +19,9 @@ public class Product {
     private Double reviews;
     private List<String> imageUrlGallery;
 
-    public Product(String imageUrl, String name, String maker, Double rawValue, Double reviews, List<String> imageUrlGallery) {
+    private String description;
+
+    public Product(String imageUrl, String name, String maker, Double rawValue, Double reviews, List<String> imageUrlGallery, String description) {
         this.imageUrl = imageUrl;
         this.name = name;
         this.maker = maker;
@@ -27,6 +29,7 @@ public class Product {
         this.reviews = reviews;
         this.price = NumberFormat.getCurrencyInstance().format(this.rawValue);
         this.imageUrlGallery = imageUrlGallery;
+        this.description = description;
     }
 
     public void setRawValue(Double rawValue) {
