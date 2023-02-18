@@ -74,7 +74,7 @@
             <form action="order" method="post" class = "needs-validation" novalidate>
                 <div class="mb-3">
                     <p class="dis fw-bold mb-2">Email address</p>
-                    <input class="form-control" type="email" placeholder="Timmy@gmail.com" name="email" required>
+                    <input class="form-control" type="email" placeholder="Timmy@gmail.com" name="email" id = "email" required>
                     <div class="invalid-feedback">
                         Please input email.
                     </div>
@@ -83,10 +83,10 @@
                     <p class="dis fw-bold mb-2">Card details</p>
                     <div class="d-flex align-items-center justify-content-between card-atm border rounded">
                         <div class="fab fa-cc-visa ps-3"></div>
-                        <input type="text" class="form-control" placeholder="Card Details" required>
+                        <input type="text" class="form-control" placeholder="Card Details" id = "cardDetail" required>
                         <div class="d-flex w-50">
-                            <input type="text" class="form-control px-0" placeholder="MM/YY" required>
-                            <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV" required>
+                            <input type="text" class="form-control px-0" placeholder="MM/YY" id = "date" required>
+                            <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV" id = "cvv" required>
                         </div>
                     </div>
                     <div class="invalid-feedback">
@@ -110,7 +110,7 @@
                             <option value="4">United States</option>
                         </select>
                         <div class="d-flex">
-                            <input class="form-control zip" type="text" placeholder="ZIP" required>
+                            <input class="form-control zip" type="text" placeholder="ZIP" id = "zip" required>
                             <input class="form-control state" type="text" placeholder="State" required>
                         </div>
                         <div class="invalid-feedback">
