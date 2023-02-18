@@ -7,6 +7,7 @@ Hyejeong Shin
 
 The website will open up to our about/home page and can be naviated to different tabs in the top right.
 
+(All Requirements fullfilled)
 Requirements:
 1. Overview of the business is in the home/about tab
 2. All 10 Products are listed in the products tab
