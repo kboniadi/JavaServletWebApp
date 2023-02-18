@@ -71,22 +71,22 @@
                 <div class="h5 fw-bold">Payment Details</div>
                 <p class="dis mb-3">Complete your purchase by providing your payment details</p>
             </div>
-            <form action="order" method="post" class = "needs-validation" novalidate>
+            <form action="order" method="post" autocomplete="on" class="needs-validation" novalidate>
                 <div class="mb-3">
                     <p class="dis fw-bold mb-2">Email address</p>
-                    <input class="form-control" type="email" placeholder="Timmy@gmail.com" name="email" id = "email" required>
+                    <input class="form-control" type="email" placeholder="Timmy@gmail.com" name="email"  autocomplete="email" required>
                     <div class="invalid-feedback">
-                        Please input email.
+                        Please input correct email.
                     </div>
                 </div>
                 <div>
                     <p class="dis fw-bold mb-2">Card details</p>
                     <div class="d-flex align-items-center justify-content-between card-atm border rounded">
                         <div class="fab fa-cc-visa ps-3"></div>
-                        <input type="text" class="form-control" placeholder="Card Details" id = "cardDetail" required>
+                        <input type="text" class="form-control" placeholder="Card Details" pattern="[0-9\s]{13,19}" autocomplete="cc-number"  required>
                         <div class="d-flex w-50">
-                            <input type="text" class="form-control px-0" placeholder="MM/YY" id = "date" required>
-                            <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV" id = "cvv" required>
+                            <input type="text" class="form-control px-0" placeholder="MM/YY" pattern="[0-9]{2}\/[0-9]{2}" autocomplete="cc-exp" required>
+                            <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV" pattern="[0-9]{3}" autocomplete="cc-csc" required>
                         </div>
                     </div>
                     <div class="invalid-feedback">
@@ -95,7 +95,7 @@
 
                     <div class="my-3 cardname">
                         <p class="dis fw-bold mb-2">Cardholder name</p>
-                        <input class="form-control" type="text" required>
+                        <input class="form-control" type="text" autocomplete="cc-name" required>
                         <div class="invalid-feedback">
                             Please input cardholder name.
                         </div>
@@ -110,8 +110,8 @@
                             <option value="4">United States</option>
                         </select>
                         <div class="d-flex">
-                            <input class="form-control zip" type="text" placeholder="ZIP" id = "zip" required>
-                            <input class="form-control state" type="text" placeholder="State" required>
+                            <input class="form-control zip" type="text" placeholder="ZIP" pattern="[0-9]+" autocomplete="postal-code" required>
+                            <input class="form-control state" type="text" placeholder="State" pattern="[\w]+" required>
                         </div>
                         <div class="invalid-feedback">
                             Please input correct billing address.
