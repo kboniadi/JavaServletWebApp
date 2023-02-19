@@ -42,8 +42,6 @@ public class OrderServlet extends HttpServlet {
 
             //get the 6-digit code
             String code = this.emailService.getRandom();
-            System.out.println(email);
-            System.out.println(code);
             //check if the email send successfully
             if(this.emailService.sendEmail(email, code)){
                 request.getSession().setAttribute("authcode", code);
