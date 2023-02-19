@@ -21,3 +21,14 @@ Requirements:
 10. Website is responsive on all pages and can be shown by adjusting window size
 11. The image of the product will become bigger if the mouse hover overs it and will decrease in size when 
     the mouse is moved off of it.
+
+## Enable automated verification email request
+
+To enable this feature, you need to create an `.env` file and place it in your `$HOME` directory.
+
+The contents of this file should be as follows:
+```bash
+EMAIL=noreply@gmail.com
+PASSWORD=password
+```
+**Note**: You must use a valid gmail account with an `App password`.

@@ -47,7 +47,7 @@
 </header>
 <div class="main container text-center">
     <h1>Our Products</h1>
-    <div id="cards-hover">
+    <div id="cards-hover" style="margin-top: 2rem;">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-3 gy-5">
             <%
                 List<Product> products = (List<Product>) request.getAttribute("products");
