@@ -16,12 +16,12 @@ public class Product {
     private String maker;
     private Double rawValue;
     private String price;
-    private Double reviews;
+    private int reviews;
     private List<String> imageUrlGallery;
 
     private String description;
 
-    public Product(String imageUrl, String name, String maker, Double rawValue, Double reviews, List<String> imageUrlGallery, String description) {
+    public Product(String imageUrl, String name, String maker, Double rawValue, int reviews, List<String> imageUrlGallery, String description) {
         this.imageUrl = imageUrl;
         this.name = name;
         this.maker = maker;

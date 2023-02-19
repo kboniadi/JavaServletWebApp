@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="css/orderStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="container d-lg-flex">
@@ -55,7 +56,12 @@
             </div>
             <p class="dis my-3 info">${product.description}</p>
             <p class="dis mb-3 updates">${product.maker}</p>
-            <p class="dis mb-3 updates">${product.reviews}/5.0</p>
+            <% for (int i = 0; i < product.getReviews(); i++) {%>
+                <span class="fa fa-star checked"></span>
+            <%}%>
+            <% for (int i = 0; i < 5-product.getReviews(); i++) {%>
+                <span class="fa fa-star"></span>
+            <%}%>
             <p class="dis mb-3 different">Three different colored sets:</p>
             <div class="dis">
                 <p class="black"><span class="fas fa-arrow-right mb-3 pe-2"></span>Black</p>

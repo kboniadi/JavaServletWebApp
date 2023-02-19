@@ -1,3 +1,4 @@
+
 :root {
     --nav-bar-height: 65px;
 }
@@ -150,4 +151,7 @@
 
 .black-bg {
     background: #111;
+}
+#cards-hover .card .checked{
+    color: orange !important;
 }

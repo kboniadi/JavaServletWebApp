@@ -313,3 +313,7 @@ p {
         font-size: 9px
     }
 }
+
+.checked {
+    color: orange;
+}
