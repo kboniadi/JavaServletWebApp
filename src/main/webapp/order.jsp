@@ -56,17 +56,15 @@
             </div>
             <p class="dis my-3 info">${product.description}</p>
             <p class="dis mb-3 updates">${product.maker}</p>
-            <% for (int i = 0; i < product.getReviews(); i++) {%>
-                <span class="fa fa-star checked"></span>
-            <%}%>
-            <% for (int i = 0; i < 5-product.getReviews(); i++) {%>
-                <span class="fa fa-star"></span>
-            <%}%>
-            <p class="dis mb-3 different">Three different colored sets:</p>
-            <div class="dis">
-                <p class="black"><span class="fas fa-arrow-right mb-3 pe-2"></span>Black</p>
-                <p class="white"><span class="fas fa-arrow-right mb-3 pe-2"></span>White</p>
-                <p class="pastel"><span class="fas fa-arrow-right mb-3 pe-2"></span>Pastel</p></div>
+            <div class="different">
+                <% for (int i = 0; i < 5; i++) {
+                    if (i + 1 <= product.getReviews()) {%>
+                        <span class="fa fa-star checked"></span>
+                    <%} else {%>
+                        <span class="fa fa-star"></span>
+                    <%}%>
+                <%}%>
+            </div>
         </div>
     </div>
     <div class="box-2">

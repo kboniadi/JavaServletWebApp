@@ -152,6 +152,11 @@
 .black-bg {
     background: #111;
 }
-#cards-hover .card .checked{
+
+#cards-hover .card .star-rating .checked{
     color: orange !important;
+}
+
+#cards-hover .card .star-rating {
+    color: #212529;
 }

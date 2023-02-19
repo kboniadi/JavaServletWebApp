@@ -209,24 +209,6 @@ p {
     animation-fill-mode: forwards
 }
 
-.black {
-    transform: translateX(-500px);
-    animation: moving 2.1s;
-    animation-fill-mode: forwards
-}
-
-.white {
-    transform: translateX(-500px);
-    animation: moving 2.3s;
-    animation-fill-mode: forwards
-}
-
-.pastel {
-    transform: translateX(-500px);
-    animation: moving 2.5s;
-    animation-fill-mode: forwards
-}
-
 .footer {
     transform: translateX(-500px);
     animation: moving 2.6s;
