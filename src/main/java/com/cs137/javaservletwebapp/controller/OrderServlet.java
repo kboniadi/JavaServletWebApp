@@ -25,7 +25,7 @@ public class OrderServlet extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        var res = this.productService.find(request.getParameter("productId"));
+        var res = this.productService.find(Integer.parseInt(request.getParameter("productId")));
         if (res.isPresent()) {
             request.setAttribute("product", res.get());
             request.getRequestDispatcher("order.jsp").forward(request, response);
