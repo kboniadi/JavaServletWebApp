@@ -6,54 +6,13 @@
 <html>
 <head>
     <title>About us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f7ec9befb7.js" crossorigin="anonymous"></script>
-    <link href="css/header.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-<header id="sticky-header" class="header-area sticky">
-    <div class="header-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="main-menu">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="${pageContext.request.contextPath}/">
-                                <h3 style="margin: 0;">
-                                    <i class="fa-solid fa-laptop"></i>
-                                </h3>
-                            </a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
-                                    </li>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="about">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="products">Products</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="checkout">Checkout</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<jsp:include page="header.jsp">
+    <jsp:param name="selected" value="about" />
+</jsp:include>
 <div class="main container">
     <h1>Mission Statement</h1>
     <p>Our business is a retail store that offers a wide variety of products ranging from the latest and
@@ -94,7 +53,4 @@
     <%}%>
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
 </html>
