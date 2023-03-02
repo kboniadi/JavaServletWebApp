@@ -10,6 +10,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<header id="sticky-header" class="header-area sticky">
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="main-menu">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="${pageContext.request.contextPath}/">
+                                <h3 style="margin: 0;">
+                                    <i class="fa-solid fa-laptop"></i>
+                                </h3>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about">About</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="products">Products</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="checkout.jsp">Checkout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <div class="container d-lg-flex">
     <div class="box-1 bg-light user">
         <div class="d-flex align-items-center mb-3">
