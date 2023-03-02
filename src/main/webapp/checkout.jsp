@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <title>Checkout</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <script src="https://kit.fontawesome.com/f7ec9befb7.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/orderStyle.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="container d-lg-flex">

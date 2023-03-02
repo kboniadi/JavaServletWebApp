@@ -1,0 +1,73 @@
+/* 2. header */
+.navbar-brand h3 {
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+}
+.sticky .navbar-brand h3 {
+    color: #444;
+    font-size: 25px;
+    margin: 0;
+}
+.main-menu ul.navbar-nav {
+}
+.main-menu ul.navbar-nav li {
+    margin-left: 35px;
+}
+.main-menu ul.navbar-nav li a.nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    padding: 11px 0;
+    line-height: 1;
+    position: relative;
+}
+.main-menu ul.navbar-nav li a.nav-link::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    left: -15px;
+    top: 37px;
+    background: #fff;
+    transition: 0.3s;
+}
+.main-menu ul.navbar-nav li.active a.nav-link:before,
+.main-menu ul.navbar-nav li a.nav-link:hover:before {
+    width: 12px;
+}
+.sticky {
+    left: 0;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
+    z-index: 1030;
+    /*padding: 3px 0;*/
+    background: #fff;
+    padding: 0;
+    /*height: var(--nav-bar-height);*/
+}
+
+.sticky .main-menu ul.navbar-nav li a.nav-link {
+    color: #444;
+}
+.sticky .main-menu ul.navbar-nav li a.nav-link::before {
+    top: 17px;
+    transition: 0.3s;
+    background: #666;
+}
+
+.sticky .navbar-icon {
+    background: #444;
+}
+.header-text-black .main-menu ul.navbar-nav li a.nav-link {
+    color: #222;
+}
+.header-text-black .navbar-brand h3 {
+    color: #222;
+}
+.header-text-black .main-menu ul.navbar-nav li a.nav-link::before {
+    background: #222;
+}
