@@ -7,7 +7,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -23,6 +22,7 @@ public class OrderServlet extends HttpServlet {
         this.productService = new ProductService();
         this.emailService = new EmailService();
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         var res = this.productService.find(Integer.parseInt(request.getParameter("productId")));
@@ -43,10 +43,10 @@ public class OrderServlet extends HttpServlet {
             //get the 6-digit code
             String code = this.emailService.getRandom();
             //check if the email send successfully
-            if(this.emailService.sendEmail(email, code)){
+            if (this.emailService.sendEmail(email, code)) {
                 request.getSession().setAttribute("authcode", code);
                 response.sendRedirect("verify.jsp");
-            }else{
+            } else {
                 out.println("Failed to send verification email");
             }
 

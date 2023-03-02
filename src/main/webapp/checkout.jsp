@@ -16,7 +16,7 @@
 <div class="main container d-lg-flex">
     <div class="box-1 bg-light user">
         <%
-            List<Product> purchaseProducts = (List<Product>) request.getAttribute("purchaseProducts");
+            List<Product> purchaseProducts = (List<Product>) request.getAttribute("checkoutProducts");
         %>
         <div class="d-flex align-items-center mb-3">
             <img
@@ -24,21 +24,21 @@
                     class="pic rounded-circle" alt="">
             <p class="ps-2 name">Guest User</p>
         </div>
-<%--        <div class="<%=!purchaseProducts.isEmpty() ? "d-none" : ""%>">--%>
-<%--            Nothing in Checkout--%>
-<%--        </div>--%>
-<%--        <div class="box-inner-1 pb-3 mb-3 <%=purchaseProducts.isEmpty() ? "d-none" : ""%>">--%>
-<%--            <h1>Checkout</h1>--%>
-<%--            <ul class ="list-group">--%>
-<%--                <%--%>
-<%--                    for (Product product : purchaseProducts) {--%>
-<%--                %>--%>
-<%--                <li class="list-group-item"><%product.getName();%></li>--%>
-<%--                <%--%>
-<%--                    }--%>
-<%--                %>--%>
-<%--            </ul>--%>
-<%--        </div>--%>
+        <div class="<%=!purchaseProducts.isEmpty() ? "d-none" : ""%>">
+            Nothing in Checkout
+        </div>
+        <div class="box-inner-1 pb-3 mb-3 <%=purchaseProducts.isEmpty() ? "d-none" : ""%>">
+            <h1>Checkout</h1>
+            <ul class ="list-group">
+                <%
+                    for (Product product : purchaseProducts) {
+                %>
+                <li class="list-group-item"><%=product.getName()%></li>
+                <%
+                    }
+                %>
+            </ul>
+        </div>
     </div>
     <div class="box-2">
         <div class="box-inner-2">
