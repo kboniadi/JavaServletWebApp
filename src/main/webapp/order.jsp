@@ -77,9 +77,12 @@
                         <label for="star1" title="text">1 star</label>
                     </div>
                 </div>
-                <button class="btn btn-primary mt-2" type="submit">
-                    Add to Cart
-                </button>
+                <form action="order" method="post">
+                    <button class="btn btn-primary mt-2">
+                        Add to Cart
+                    </button>
+                </form>
+
             </form>
         </div>
     </div>

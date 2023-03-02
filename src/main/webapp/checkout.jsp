@@ -5,18 +5,16 @@
 <html>
 <head>
     <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f7ec9befb7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/orderStyle.css">
 </head>
 <body>
-<jsp:include page="header.jsp">
-    <jsp:param name="selected" value="checkout" />
-</jsp:include>
-<div class="main container d-lg-flex">
+<div class="container d-lg-flex">
     <div class="box-1 bg-light user">
         <%
-            List<Product> purchaseProducts = (List<Product>) request.getAttribute("checkoutProducts");
+            List<Product> checkoutProducts = (List<Product>) request.getAttribute("checkoutProducts");
         %>
         <div class="d-flex align-items-center mb-3">
             <img
@@ -24,20 +22,23 @@
                     class="pic rounded-circle" alt="">
             <p class="ps-2 name">Guest User</p>
         </div>
-        <div class="<%=!purchaseProducts.isEmpty() ? "d-none" : ""%>">
-            Nothing in Checkout
-        </div>
-        <div class="box-inner-1 pb-3 mb-3 <%=purchaseProducts.isEmpty() ? "d-none" : ""%>">
+
+        <div class="box-inner-1 pb-3 mb-3">
             <h1>Checkout</h1>
-            <ul class ="list-group">
-                <%
-                    for (Product product : purchaseProducts) {
-                %>
-                <li class="list-group-item"><%=product.getName()%></li>
-                <%
-                    }
-                %>
-            </ul>
+            <div class="<%=!checkoutProducts.isEmpty() ? "d-none" : ""%>">
+                Nothing in Checkout
+            </div>
+            <div class="<%=checkoutProducts.isEmpty() ? "d-none" : ""%>">
+                <ul class ="list-group">
+                    <%
+                        for (Product product : checkoutProducts) {
+                    %>
+                    <li class="list-group-item"><%product.getName();%></li>
+                    <%
+                        }
+                    %>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="box-2">
@@ -98,17 +99,19 @@
                         <div class="d-flex flex-column dis">
                             <div class="d-flex align-items-center justify-content-between mb-2">
                                 <p>Subtotal</p>
-                                <p>
+                                <%
+                                    double total = 0;
+                                %>
+                                <p class="<%=!checkoutProducts.isEmpty() ? "d-none" : ""%>">
+                                    <%=total%>
+                                </p>
+                                <p<%=checkoutProducts.isEmpty() ? "d-none" : ""%>">
                                     <%--                                    <span class="fas fa-dollar-sign"></span>--%>
-<%--                                    <%--%>
-<%--                                        double total = 0;--%>
-<%--                                        for (Product product : purchaseProducts){--%>
-<%--                                            total += product.getPrice();--%>
-<%--                                        }--%>
-<%--                                    %>--%>
-                                        <%
-                                            String total = "145.00";
-                                        %>
+                                    <%
+                                        for (Product product : checkoutProducts){
+                                            total += product.getRawValue();
+                                        }
+                                    %>
                                     $<%=total%>
                                 </p>
                             </div>
@@ -140,6 +143,8 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
 </body>

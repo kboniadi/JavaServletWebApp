@@ -11,9 +11,5 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CheckoutService {
-    public List<Product> getCheckout() {
-        List<Product> checkout = new ArrayList<>();
-        return checkout;
-    }
 
 }
