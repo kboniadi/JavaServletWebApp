@@ -37,7 +37,7 @@ CREATE TABLE ProductOrder (
 
 -- insert
 INSERT INTO Employee (profileURL, name, title, email) VALUES ("img/profile-pic.jpg", "kord", "software engineer", "kboniadi@uci.edu");
-INSERT INTO Employee (profileURL, name, title, email) VALUES ("img/profile-pic.jpg", "hannah", "software engineer", "hannah@uci.edu");
+-- INSERT INTO Employee (profileURL, name, title, email) VALUES ("img/profile-pic.jpg", "hannah", "software engineer", "hannah@uci.edu");
 INSERT INTO Employee (profileURL, name, title, email) VALUES ("img/profile-pic.jpg", "alice", "sofware engineer", "alice@uci.edu");
 
 INSERT INTO Product (imageURL, name, maker, price, review, description) VALUES ("img/products/iphone14-pro1.png", "iPhone 14 Pro", "Apple Inc.", 1000.00, 4, "The iPhone 14 Plus comes with 6.1-inch OLED display with 120Hz refresh rate and Apple's improved Bionic A16 processor. On the back there is a Triple camera setup with 48MP main camera");

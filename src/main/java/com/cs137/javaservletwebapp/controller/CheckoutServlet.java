@@ -1,5 +1,6 @@
 package com.cs137.javaservletwebapp.controller;
 
+import com.cs137.javaservletwebapp.model.Cart;
 import com.cs137.javaservletwebapp.model.Product;
 import com.cs137.javaservletwebapp.service.ProductService;
 import jakarta.servlet.ServletException;
@@ -30,14 +31,15 @@ public class CheckoutServlet extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkoutProducts = (List<Product>) request.getSession().getAttribute("checkoutProducts");
-        request.setAttribute("checkoutProducts", checkoutProducts);
+        var cart = (Cart) request.getSession().getAttribute("cart");
+        request.setAttribute("checkoutProducts", cart.getProducts());
         request.getRequestDispatcher("checkout.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        for (Product product : checkoutProducts){
+        var cart = (Cart) request.getSession().getAttribute("cart");
+        for (Product product : cart.getProducts()){
             productService.writePurchase(product.getId());
         }
     }

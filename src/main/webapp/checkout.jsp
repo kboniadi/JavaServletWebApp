@@ -33,7 +33,7 @@
                     <%
                         for (Product product : checkoutProducts) {
                     %>
-                    <li class="list-group-item"><%product.getName();%></li>
+                    <li class="list-group-item"><%=product.getName()%></li>
                     <%
                         }
                     %>

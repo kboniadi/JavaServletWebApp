@@ -1,4 +1,4 @@
-<jsp:useBean id="product" scope="request" type="com.cs137.javaservletwebapp.model.Product"/>
+<jsp:useBean id="product" scope="session" type="com.cs137.javaservletwebapp.model.Product"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -77,12 +77,9 @@
                         <label for="star1" title="text">1 star</label>
                     </div>
                 </div>
-                <form action="order" method="post">
-                    <button class="btn btn-primary mt-2">
-                        Add to Cart
-                    </button>
-                </form>
-
+                <button class="btn btn-primary mt-2" type="submit">
+                    Add to Cart
+                </button>
             </form>
         </div>
     </div>
