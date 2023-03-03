@@ -46,7 +46,8 @@ public class CheckoutServlet extends HttpServlet{
         for (Product product : cart.getProducts()){
             productService.writePurchase(product.getId());
         }
+        request.setAttribute("cart", cart);
         request.getSession().removeAttribute("cart");
-        response.sendRedirect("detail");
+        request.getRequestDispatcher("orderDetail.jsp").forward(request, response);
     }
 }
