@@ -1,5 +1,6 @@
 <%@ page import="com.cs137.javaservletwebapp.model.Product" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.cs137.javaservletwebapp.model.Cart" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -14,7 +15,7 @@
 <div class="container d-lg-flex">
     <div class="box-1 bg-light user">
         <%
-            List<Product> checkoutProducts = (List<Product>) request.getAttribute("checkoutProducts");
+            Cart cart = (Cart) request.getAttribute("cart");
         %>
         <div class="d-flex align-items-center mb-3">
             <img
@@ -25,13 +26,13 @@
 
         <div class="box-inner-1 pb-3 mb-3">
             <h1>Checkout</h1>
-            <div class="<%=!checkoutProducts.isEmpty() ? "d-none" : ""%>">
+            <div class="<%=!cart.isEmpty() ? "d-none" : ""%>">
                 Nothing in Checkout
             </div>
-            <div class="<%=checkoutProducts.isEmpty() ? "d-none" : ""%>">
+            <div class="<%=cart.isEmpty() ? "d-none" : ""%>">
                 <ul class ="list-group">
                     <%
-                        for (Product product : checkoutProducts) {
+                        for (Product product : cart.getProducts()) {
                     %>
                     <li class="list-group-item"><%=product.getName()%></li>
                     <%
@@ -99,20 +100,12 @@
                         <div class="d-flex flex-column dis">
                             <div class="d-flex align-items-center justify-content-between mb-2">
                                 <p>Subtotal</p>
-                                <%
-                                    double total = 0;
-                                %>
-                                <p class="<%=!checkoutProducts.isEmpty() ? "d-none" : ""%>">
-                                    <%=total%>
+                                <p class="<%=!cart.isEmpty() ? "d-none" : ""%>">
+                                    0
                                 </p>
-                                <p<%=checkoutProducts.isEmpty() ? "d-none" : ""%>">
+                                <p class="<%=cart.isEmpty() ? "d-none" : ""%>">
                                     <%--                                    <span class="fas fa-dollar-sign"></span>--%>
-                                    <%
-                                        for (Product product : checkoutProducts){
-                                            total += product.getRawValue();
-                                        }
-                                    %>
-                                    $<%=total%>
+                                    $<%=cart.getRawTotal()%>
                                 </p>
                             </div>
                             <div class="d-flex align-items-center justify-content-between mb-2">
@@ -129,12 +122,12 @@
                                 Total</p>
                                 <p id="total" class="fw-bold">
                                     <%--                                    <span class="fas fa-dollar-sign"></span>--%>
-                                    $<%=total%>
+                                    $<%=cart.getRawTotal()%>
                                 </p>
                             </div>
                             <%--                            <span class="fas fa-dollar-sign px-1"></span>--%>
                             <button class="btn btn-primary mt-2" type="submit">
-                                Pay <span id="pay-total">$<%=total%></span>
+                                Pay <span id="pay-total">$<%=cart.getRawTotal()%></span>
                             </button>
                         </div>
                     </div>

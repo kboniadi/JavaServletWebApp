@@ -32,7 +32,11 @@ public class CheckoutServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         var cart = (Cart) request.getSession().getAttribute("cart");
-        request.setAttribute("checkoutProducts", cart.getProducts());
+        if (cart == null) {
+            cart = new Cart();
+            request.getSession().setAttribute("cart", cart);
+        }
+        request.setAttribute("cart", cart);
         request.getRequestDispatcher("checkout.jsp").forward(request, response);
     }
 

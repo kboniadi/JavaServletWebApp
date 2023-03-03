@@ -38,6 +38,14 @@ public class Cart {
         return this.productHashMap.values().stream().toList();
     }
 
+    public boolean isEmpty() {
+        return this.productHashMap.isEmpty();
+    }
+
+    public int size() {
+        return this.productHashMap.size();
+    }
+
     public Double getRawTotal() {
         return this.totalCost;
     }
