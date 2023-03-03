@@ -48,7 +48,7 @@
                 <div class="h5 fw-bold">Payment Details</div>
                 <p class="dis mb-3">Complete your purchase by providing your payment details</p>
             </div>
-            <form action="order" method="post" autocomplete="on" class="needs-validation" novalidate>
+            <form action="checkout" method="post" autocomplete="on" class="needs-validation" novalidate>
                 <div class="mb-3">
                     <p class="dis fw-bold mb-2">Email address</p>
                     <input class="form-control" type="email" placeholder="Timmy@gmail.com" name="email"  autocomplete="email" required>

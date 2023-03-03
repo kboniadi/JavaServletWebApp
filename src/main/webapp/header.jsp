@@ -42,7 +42,7 @@
                                     <li class="nav-item">
                                         <a style="padding: 0" class="nav-link" href="checkout">
                                             <div id="ex4">
-                                                  <span class="p1 fa-stack fa-xl" data-count="${sessionScope.cart.size()}">
+                                                  <span class="p1 fa-stack fa-xl" data-count="${sessionScope.cart != null ? sessionScope.cart.size() : 0}">
 <%--                                                    <i class="p2 fa fa-circle fa-stack-2x"></i>--%>
                                                     <i class="p3 fa-solid fa-cart-shopping fa-stack-1x xfa-inverse" data-count="4b"></i>
                                                   </span>
