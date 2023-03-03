@@ -11,16 +11,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>About us</title>
+  <title>Order Detail</title>
   <script src="https://kit.fontawesome.com/f7ec9befb7.js" crossorigin="anonymous"></script>
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
   <h1>Thank you for ordering!</h1>
-  <div>
+  <div class="main container">
     <h2>These items are on the way</h2>
     <%
-      Cart cart = (Cart) request.getAttribute("cart");
+      Cart cart = (Cart) request.getAttribute("order");
     %>
     <div>
       <ul class ="list-group">
