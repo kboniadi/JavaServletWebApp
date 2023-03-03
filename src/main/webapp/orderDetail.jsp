@@ -16,9 +16,12 @@
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Thank you for ordering!</h1>
+<jsp:include page="header.jsp">
+  <jsp:param name="selected" value="about" />
+</jsp:include>
+
   <div class="main container">
-    <h2>These items are on the way</h2>
+    <h1>Thank you for ordering!</h1>
     <%
       Cart cart = (Cart) request.getAttribute("cart");
     %>
