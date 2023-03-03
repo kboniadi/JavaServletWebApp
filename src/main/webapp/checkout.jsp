@@ -6,13 +6,15 @@
 <html>
 <head>
     <title>Checkout</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f7ec9befb7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/orderStyle.css">
 </head>
 <body>
-<div class="container d-lg-flex">
+<jsp:include page="header.jsp">
+    <jsp:param name="selected" value="products" />
+</jsp:include>
+<div class="main container d-lg-flex">
     <div class="box-1 bg-light user">
         <%
             Cart cart = (Cart) request.getAttribute("cart");
@@ -137,7 +139,6 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
 </body>
