@@ -23,8 +23,8 @@
         <div class="carousel-inner">
             <%
                 for (int i = 0; i < productsPurchased.size(); i++) {%>
-            <div class="carousel-item <%=i == 0 ? "active" : ""%>">
-                <img src="<%=productsPurchased.get(i).getImageUrl()%>" class="d-block w-25"
+            <div class="carousel-item <%=i == 0 ? "active" : ""%>" style="height: 300px; width: 100%;">
+                <img src="<%=productsPurchased.get(i).getImageUrl()%>" class="d-block w-100"
                      alt="" style="object-fit: cover">
             </div>
             <%}%>
