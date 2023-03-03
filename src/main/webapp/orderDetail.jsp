@@ -20,7 +20,7 @@
   <div class="main container">
     <h2>These items are on the way</h2>
     <%
-      Cart cart = (Cart) request.getAttribute("order");
+      Cart cart = (Cart) request.getAttribute("cart");
     %>
     <div>
       <ul class ="list-group">
