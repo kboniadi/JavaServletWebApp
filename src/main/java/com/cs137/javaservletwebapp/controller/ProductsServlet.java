@@ -22,7 +22,6 @@ public class ProductsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("products", this.products.getProducts());
-        request.setAttribute("productsPurchased", this.products.getLastNPurchases(5));
         request.getRequestDispatcher("products.jsp").forward(request, response);
     }
 
