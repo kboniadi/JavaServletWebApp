@@ -45,7 +45,6 @@ public class OrderServlet extends HttpServlet {
         request.getSession().removeAttribute("product");
         response.sendRedirect("products");
 
-
 //        //TODO: validate form data and initiate order confirmation and email verification
 //        try (PrintWriter out = response.getWriter()) {
 //            String email = request.getParameter("product");
