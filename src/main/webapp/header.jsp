@@ -4,10 +4,10 @@
     <title>Header</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="css/header.css" rel="stylesheet">
     <script defer async src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
             crossorigin="anonymous"></script>
+    <link href="css/header.css" rel="stylesheet">
 </head>
 <body>
 <header id="sticky-header" class="header-area sticky">
@@ -39,8 +39,15 @@
                                     <li class="nav-item ${param.selected == "products" ? "active" : ""}">
                                         <a class="nav-link" href="products">Products</a>
                                     </li>
-                                    <li class="nav-item ${param.selected == "checkout" ? "active" : ""}">
-                                        <a class="nav-link" href="checkout">Checkout</a>
+                                    <li class="nav-item">
+                                        <a style="padding: 0" class="nav-link" href="checkout">
+                                            <div id="ex4">
+                                                  <span class="p1 fa-stack fa-xl" data-count="${sessionScope.cart.size()}">
+<%--                                                    <i class="p2 fa fa-circle fa-stack-2x"></i>--%>
+                                                    <i class="p3 fa-solid fa-cart-shopping fa-stack-1x xfa-inverse" data-count="4b"></i>
+                                                  </span>
+                                            </div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
