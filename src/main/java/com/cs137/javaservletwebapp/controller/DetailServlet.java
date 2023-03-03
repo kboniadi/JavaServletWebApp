@@ -20,12 +20,12 @@ public class DetailServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        var cart = (Cart) request.getSession().getAttribute("cart");
+        var cart = (Cart) request.getSession().getAttribute("order");
         if (cart == null) {
             cart = new Cart();
-            request.getSession().setAttribute("cart", cart);
+            request.getSession().setAttribute("order", cart);
         }
-        request.setAttribute("cart", cart);
+        request.getSession().setAttribute("order", cart);
         request.getRequestDispatcher("orderDetail.jsp").forward(request, response);
     }
 
