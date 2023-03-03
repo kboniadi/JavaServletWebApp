@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "DetailServlet", value = "/detail")
+@WebServlet(name = "DetailServlet", value = "/orderDetail")
 public class DetailServlet extends HttpServlet {
 
     @Override
@@ -20,13 +20,6 @@ public class DetailServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        var cart = (Cart) request.getSession().getAttribute("order");
-        if (cart == null) {
-            cart = new Cart();
-            request.getSession().setAttribute("order", cart);
-        }
-        request.getSession().setAttribute("order", cart);
-        request.getRequestDispatcher("orderDetail.jsp").forward(request, response);
     }
 
     @Override

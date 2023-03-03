@@ -126,7 +126,7 @@
                                 </p>
                             </div>
                             <%--                            <span class="fas fa-dollar-sign px-1"></span>--%>
-                            <button class="btn btn-primary mt-2" type="submit">
+                            <button class="btn btn-primary mt-2" type="submit" disabled="${sessionScope.cart.isEmpty() ? true : false}">
                                 Pay <span id="pay-total">$<%=cart.getRawTotal()%></span>
                             </button>
                         </div>

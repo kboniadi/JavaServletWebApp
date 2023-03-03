@@ -19,14 +19,10 @@ public class CheckoutServlet extends HttpServlet{
 
     private ProductService productService;
 
-    List<Product> checkoutProducts;
-
-
     @Override
     public void init() throws ServletException {
         super.init();
         this.productService = new ProductService();
-        checkoutProducts = new ArrayList<>();
     }
 
     @Override
