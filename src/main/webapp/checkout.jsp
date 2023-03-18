@@ -89,8 +89,16 @@
                             <option value="4">United States</option>
                         </select>
                         <div class="d-flex">
-                            <input class="form-control zip" type="text" placeholder="ZIP" pattern="[0-9]+" autocomplete="postal-code" required>
-                            <input class="form-control state" type="text" placeholder="State" pattern="[\w]+" required>
+                            <div class="dropdown" style="width: 100%;">
+                                <input id="search_box_zip" type="text" name="search_box" class="form-control zip" placeholder="ZIP" pattern="[0-9]+" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" required />
+                                <span id="search_result_zip" class="dropdowns" style="position: absolute; width: 100%;"></span>
+                            </div>
+<%--                            <input class="form-control zip" type="text" placeholder="ZIP" pattern="[0-9]+" autocomplete="postal-code" required>--%>
+<%--                            <input class="form-control state" type="text" placeholder="State" pattern="[\w]+" required>--%>
+                            <div class="dropdown" style="width: 100%">
+                                <input id="search_box_state" type="text" name="search_box" class="form-control state" placeholder="State" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" required/>
+                                <span id="search_result_state" class="dropdowns" style="position: absolute; width: 100%"></span>
+                            </div>
                         </div>
                         <div class="invalid-feedback">
                             Please input correct billing address.
