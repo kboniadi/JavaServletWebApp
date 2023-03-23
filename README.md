@@ -9,7 +9,8 @@ The website will open up to our about/home page and can be navigated to differen
 
 (All Requirements fulfilled)
 Requirements:
-1. The products are stored in a database and the last 5 purchased item are displayed on the products tab of the website. The star rating can be used by the users once clicked on product to see their more details.
-2. The product detail page contains description of the phone and star rating only and contains no phone. It contains the add to cart button that uses session to store the products.
-3. The order request sent to a server-side Java Servlet, stores the information in a database table.
-4. When you click on the shopping cart icon on the top right, you will be able to see all the items you've added to cart and the total price with the from to fill out to pay for everything in the cart.
+1. All webpage files in this project were used using JSP and can be found under the webapp folder. All JSP files have been implemented with the java servlet.
+2. We used AJAX implementing the zipcode, state, and tax and the codes can be found under the checkout.jsp and script.js files under webappfolder. These functions can be seen after pressing the cart button on the top right after putting some items in the cart. Once typing in the zipcode and state it will automatically show a dropdown of zipcodes and states that you might possibly be typing depending on what you have typed so far. The tax and the total including the tax will automatically update after you type in the zipcode.
+
+
+How To Compile and Run:
