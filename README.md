@@ -14,3 +14,18 @@ Requirements:
 
 
 How To Compile and Run:
+This project is tested and ran using Glassfish. In addition, the database is hosted locally in a docker container.
+
+Requirements:
+1. docker
+2. maven
+3. glassfish
+4. java version 17
+
+Build and run:
+1. build project using maven build script
+2. start docker and spin up a mysql database: ```docker-compose up -d```
+   3. to stop the container use: ```docker-compose down```
+4. run the project using glassfish
+
+**Note:** All of these steps can be made simple by using Intellij's integration with maven and glassfish
