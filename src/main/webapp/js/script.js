@@ -124,6 +124,39 @@ const stateList = document.getElementById('search_result_state');
 const zipInput = document.getElementById('search_box_zip');
 const zipList = document.getElementById('search_result_zip');
 
+function getTax(zip){
+    if (zip.length = 5) {
+        // Make Ajax call to CSV file
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                //get rid of quotations and get rid of header
+                const data = this.responseText.replace(/"/g, '').split('\n').slice(1);
+                let taxRate = new String;
+                data.forEach((row) => {
+                    const cols = row.split(',');
+                    if (cols.length >= 4 && zip !== '' && cols[1].toLowerCase() == zip.toLowerCase()) {
+                        taxRate = (cols[3]);
+                    }
+                })
+                let subtotal = document.getElementById('subtotal').innerText;
+                subtotal = subtotal.substring(1);
+                let taxAmount = parseFloat(subtotal) * parseFloat(taxRate);
+                let total = parseFloat(taxAmount)+parseFloat(subtotal);
+                if(taxAmount){
+                    document.getElementById('tax').innerHTML = "$"+taxAmount.toFixed(2);
+                }
+                if(total){
+                    document.getElementById('total').innerHTML = "$"+total.toFixed(2);
+                }
+            }
+        };
+        xhr.open('GET', 'data/tax_rates2.csv', true);
+        xhr.send();
+    } else {
+        populateZipList([])
+    }
+}
 stateInput.addEventListener('keyup', function () {
     const search_query = this.value;
     if (search_query.length > 0) {
@@ -172,7 +205,7 @@ function get_text_state(event) {
 
 zipInput.addEventListener('keyup', function () {
     const search_query = this.value;
-    if (search_query.length > 2) {
+    if (search_query.length > 0) {
         // Make Ajax call to CSV file
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {

@@ -90,7 +90,7 @@
                         </select>
                         <div class="d-flex">
                             <div class="dropdown" style="width: 100%;">
-                                <input id="search_box_zip" type="text" name="search_box" class="form-control zip" placeholder="ZIP" pattern="[0-9]+" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" required />
+                                <input id="search_box_zip" type="text" name="search_box" class="form-control zip" placeholder="ZIP" pattern="[0-9]+" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onblur="getTax(this.value)"required />
                                 <span id="search_result_zip" class="dropdowns" style="position: absolute; width: 100%;"></span>
                             </div>
 <%--                            <input class="form-control zip" type="text" placeholder="ZIP" pattern="[0-9]+" autocomplete="postal-code" required>--%>
@@ -111,9 +111,9 @@
                             <div class="d-flex align-items-center justify-content-between mb-2">
                                 <p>Subtotal</p>
                                 <p class="<%=!cart.isEmpty() ? "d-none" : ""%>">
-                                    0
+                                    $0.00
                                 </p>
-                                <p class="<%=cart.isEmpty() ? "d-none" : ""%>">
+                                <p id="subtotal" class="<%=cart.isEmpty() ? "d-none" : ""%>">
                                     <%--                                    <span class="fas fa-dollar-sign"></span>--%>
                                     $<%=cart.getRawTotal()%>
                                 </p>
@@ -128,11 +128,15 @@
                                 </div>
                                 <p><span class="fas fa-dollar-sign"></span><span id="discount-value">0.00</span></p>
                             </div>
-                            <div class="d-flex align-items-center justify-content-between mb-2"><p class="fw-bold">
-                                Total</p>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <p>Tax</p>
+                                <p id="tax">$0.00</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <p class="fw-bold">Total</p>
                                 <p id="total" class="fw-bold">
                                     <%--                                    <span class="fas fa-dollar-sign"></span>--%>
-                                    $<%=cart.getRawTotal()%>
+                                    $0.00
                                 </p>
                             </div>
                             <%--                            <span class="fas fa-dollar-sign px-1"></span>--%>
